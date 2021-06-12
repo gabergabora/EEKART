@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E Kart</title>
+    <link rel="icon" href="favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="8920350105-5lpbopdrpd9iqdc5s130c40bm9brn4sc.apps.googleusercontent.com">
+</head>
+
+<body id="Body">
+    <div class="containerr">
+        <div class="Divv">
+            <div class="logo">
+                <h3 style="font-weight: bold;">E Kart</h3>
+                <div class=dropdown>
+
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inbn">
+                <input type="search" placeholder="What are you looking for?" class="input" name="" id="input" />
+
+                <button class="button" onclick="change()">search</button>
+
+
+
+
+            </div>
+            <button class="cart" onclick="showCart()">
+                <span style="background-color: rgb(240, 12, 88);"><h5>Cart</h5></span>
+                <span style="background-color: rgb(240, 12, 88);"><h5><i class="fas fa-shopping-cart" style="background-color: rgb(240, 12, 88); height: 5px;" ></i></h5></span>
+                 <div class="dropdown_2" style="width: 17vh;display: flex; background-color: rgb(240, 12, 88);">
+                   
+                    <div class="dropdown-content">
+                       <a href="#">Link1</a>
+                       <a href="#">Link2</a>
+                        <a href="#">Link3</a>      
+                   </div>
+                 </div>
+                 
+            </button>
+            <div class="sign_in">
+                <div class="dropdown_2" style="background-color: rgb(240, 12, 88);">
+                    <div class="dropdown-content">
+                        <div class="g-signin2">
+                            <div id="my-signin2"></div>
+
+                        </div>
+                        <a href="#">Link1</a>
+                        <a href="#">Link2</a>
+                        <a href="#">Link3</a>
+
+                    </div>
+
+                </div>
+                <span style="background-color: rgb(240, 12, 88);"><h5>Sign in</h5></span>
+
+                <span style="background-color: rgb(240, 12, 88);"><h5><i class="fas fa-user-circle" style="background-color: rgb(240, 12, 88); height: 5px;" ></i></h5></span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="grid_1" style="width: 100%;">
+        <div class="left-grid-1">
+            <div style="height: 10vh;display: flex;justify-content: center;align-items: center;">
+                <h5 style="background-color: white;">Top category</h5>
+            </div>
+            <div class="category">
+                <div class="category-logo" id="l1"></div>
+                <h6 style="background-color: white; margin-left: 8px;"> All offers </h6>
+            </div>
+            <div class="category">
+                <div class="category-logo" id="l2"></div>
+                <h6 style="background-color: white; margin-left: 8px;"> Electronics </h6>
+            </div>
+            <div class="category">
+                <div class="category-logo" id="l3"></div>
+                <h6 style="background-color: white; margin-left: 8px;"> Cosmetics </h6>
+            </div>
+            <div class="category">
+                <div class="category-logo" id="l4"></div>
+                <h6 style="background-color: white; margin-left: 8px;"> Mobile&Tablets </h6>
+            </div>
+            <div class="category">
+                <div class="category-logo" id="l5"></div>
+                <h6 style="background-color: white; margin-left: 8px;"> Home Kitchen </h6>
+            </div>
+            <div class="category">
+                <div class="category-logo" id="l6"></div>
+                <h6 style="background-color: white; margin-left: 8px;"> Clothes </h6>
+            </div>
+
+        </div>
+
+        <div class="content" style="background-color:#deedf0; height: 450px; width: 100%;">
+
+
+            <div style="width: 100%;">
+                <!--carousel bootstrap-->
+                <div id="carouselExampleIndicators" class="carousel slide inner-content" data-ride="carousel" style="width: 100%;">
+                    <!-- <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol> -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active c-item">
+                            <img class="d-block w-100" src="https://rukminim1.flixcart.com/flap/2000/2000/image/f17c212710a1d0d7.jpg?q=50" alt="First slide">
+                        </div>
+                        <div class="carousel-item c-item">
+                            <img class="d-block w-100" src="https://rukminim1.flixcart.com/flap/1080/1440/image/1f0c014aa88e7363.jpg?q=50" alt="Second slide">
+                        </div>
+                        <div class="carousel-item c-item">
+                            <img class="d-block w-100" src="https://rukminim1.flixcart.com/flap/1080/1440/image/64168c9bca44ef62.jpg?q=50" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <!--carousel end-->
+            </div>
+
+
+            <div class="content2" style="width: 100%;">
+                <div class="inner-content">
+                    <div class="products bg-image hover-zoom" id="p1"></div>
+                    <h6>Men watch</h6>
+                    <h6>⭐⭐⭐⭐⭐</h6>
+                    <h6>Rs. 10999</h6>
+
+
+
+                </div>
+                <div class="inner-content">
+                    <div class="products" id="p2"></div>
+                    <h6>Beard Trimmer </h6>
+                    <h6>⭐⭐⭐⭐⭐ </h6>
+                    <h6>Rs. 1500 </h6>
+                </div>
+                <div class="inner-content">
+                    <div class="products" id="p3"></div>
+                    <h6>Yellow Geortee Saree</h6>
+                    <h6>⭐⭐⭐⭐⭐</h6>
+                    <h6>Rs. 1250</h6>
+                </div>
+                <div class="inner-content">
+                    <div class="products" id="p4"></div>
+
+                    <h6>TrackPants</h6>
+                    <h6>⭐⭐⭐⭐⭐</h6>
+                    <h6>Rs. 534</h6>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--<div>
+        <h2 style="background-color: wheat;">Trending Products</h2>
+    </div>-->
+
+    <div style="height: 20px;">
+    </div>
+    <h3 style="margin: 0px 0px 0px; padding: 0 4px; background-color: #deedf0;">Trending Products</h3>
+    <div style="height: 20px;"></div>
+
+
+    <!--cs2-->
+
+    <div class="containerrr">
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-none d-lg-block">
+                        <div class="slide-box">
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi1"></div>
+                                <div class="slbox-info">
+                                    <h5>T-shirt</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 900</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi2"></div>
+                                <div class="slbox-info">
+                                    <h5>Rudraksh mala</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 250</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi3"></div>
+                                <div class="slbox-info">
+                                    <h5>Leather Wallet</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 300</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi4"></div>
+                                <div class="slbox-info">
+                                    <h5>Cutter</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 450</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi5"></div>
+                                <div class="slbox-info">
+                                    <h5>Purse</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 200</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="d-none d-lg-block">
+                        <div class="slide-box">
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi6"></div>
+                                <div class="slbox-info">
+                                    <h5>Saree</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 1390</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi7"></div>
+                                <div class="slbox-info">
+                                    <h5>Oximeter</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 200</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi8"></div>
+                                <div class="slbox-info">
+                                    <h5>Masks</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 200</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi9"></div>
+                                <div class="slbox-info">
+                                    <h5>Rudraksh</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 150</h6>
+                                </div>
+                            </div>
+                            <div class="ck" style="cursor: pointer;">
+                                <div class="hii" id="hi10"></div>
+                                <div class="slbox-info">
+                                    <h5>Shocks</h5>
+                                    <h6>⭐⭐⭐⭐⭐</h6>
+                                    <h6>Rs. 100</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+    <!--cs2-->
+
+
+    <!--cs3-->
+
+    <div class="containerrr">
+
+      <div id="carousel1" class="carousel slide" data-ride="carousel">
+
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="d-none d-lg-block">
+                      <div class="slide-box">
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi1"></div>
+                              <div class="slbox-info">
+                                  <h5>T-shirt</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 900</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi2"></div>
+                              <div class="slbox-info">
+                                  <h5>Rudraksh mala</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 250</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi3"></div>
+                              <div class="slbox-info">
+                                  <h5>Leather Wallet</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 300</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi4"></div>
+                              <div class="slbox-info">
+                                  <h5>Cutter</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 450</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi5"></div>
+                              <div class="slbox-info">
+                                  <h5>Purse</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 200</h6>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="carousel-item">
+                  <div class="d-none d-lg-block">
+                      <div class="slide-box">
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi6"></div>
+                              <div class="slbox-info">
+                                  <h5>Saree</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 1390</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi7"></div>
+                              <div class="slbox-info">
+                                  <h5>Oximeter</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 200</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi8"></div>
+                              <div class="slbox-info">
+                                  <h5>Masks</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 200</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi9"></div>
+                              <div class="slbox-info">
+                                  <h5>Rudraksh</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 150</h6>
+                              </div>
+                          </div>
+                          <div class="ck" style="cursor: pointer;">
+                              <div class="hii" id="hi10"></div>
+                              <div class="slbox-info">
+                                  <h5>Shocks</h5>
+                                  <h6>⭐⭐⭐⭐⭐</h6>
+                                  <h6>Rs. 100</h6>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
+
+  </div>
+    <!--cs3-->
+
+    <div style="height: 2px;"></div>
+    <div class="c2nd">
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-1"></div>
+            <div class="slbox-info">
+                <h5>Saree</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 1390</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-2"></div>
+            <div class="slbox-info">
+                <h5>Oximeter</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 200</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-3"></div>
+            <div class="slbox-info">
+                <h5>Masks</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 200</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-4"></div>
+            <div class="slbox-info">
+                <h5>Rudraksh</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 150</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-5"></div>
+            <div class="slbox-info">
+                <h5>Shocks</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 100</h6>
+            </div>
+        </div>
+    </div>
+    <div style="height: 4px;"></div>
+    <div class="ama-lay">
+        <div class="ama-main3">
+            <div>
+                <h4 style="font-weight: bold; padding: 0 0;">Experience hands-free entertainment</h4>
+            </div>
+            <div class="ama-in-lay">
+                <div id="am-0" class="ama-short-4"></div>
+
+                <div id="am-01" class="ama-short-4">
+                    <div></div>
+                </div>
+            </div>
+            <div class="ama-in-lay">
+                <h4 style="font-size:smaller;">Echo Dot | Listen to your favourite music & more</h4>
+
+                <h4 style="font-size:smaller;">Fire TV Stick (2020) with Alexa Voice Remote</h4>
+            </div>
+
+            <div style="height: 10px; background-color: white;"></div>
+
+            <div class="ama-in-lay">
+                <div id="am-02" class="ama-short-4">
+                    <div></div>
+                </div>
+
+                <div id="am-03" class="ama-short-4">
+                    <div></div>
+                </div>
+            </div>
+            <div class="ama-in-lay">
+                <h4 style="font-size:smaller;">Echo smart display | Hands-free video calling</h4>
+
+                <h4 style="font-size:smaller;">All-new Echo | Powered by Dolby</h4>
+            </div>
+        </div>
+
+
+        <div class="ama-main3">
+            <div>
+                <h4 style="font-weight: bold; padding: 0 0;">Handpicked fitness essentials</h4>
+            </div>
+            <div style="background-color: white;height: 15px;"></div>
+            <div class="ama-in-lay">
+                <div id="am-1" class="ama-short-4"></div>
+
+                <div id="am-2" class="ama-short-4">
+                    <div></div>
+                </div>
+            </div>
+            <div class="ama-in-lay">
+                <h4 style="font-size:smaller;">Treadmills</h4>
+
+                <h4 style="font-size:smaller;">Excercise bike</h4>
+            </div>
+
+            <div style="height: 10px; background-color: white;"></div>
+
+            <div class="ama-in-lay">
+                <div id="am-3" class="ama-short-4">
+                    <div></div>
+                </div>
+
+                <div id="am-4" class="ama-short-4">
+                    <div></div>
+                </div>
+            </div>
+            <div class="ama-in-lay">
+                <h4 style="font-size:smaller;">Dumbbells|Starting ₹299</h4>
+
+                <h4 style="font-size:smaller;">Excercise gloves</h4>
+            </div>
+        </div>
+
+
+        <div class="ama-main3">
+            <div>
+                <h4 style="font-weight: bold; padding: 0 0;">Cookware & dining</h4>
+            </div>
+            <div style="background-color: white;height: 15px;"></div>
+            <div class="ama-in-lay">
+                <div id="am-5" class="ama-short-4"></div>
+
+                <div id="am-6" class="ama-short-4">
+                    <div></div>
+                </div>
+            </div>
+            <div class="ama-in-lay">
+                <h4 style="font-size:smaller;">Gas stoves</h4>
+
+                <h4 style="font-size:smaller;">Cook wares</h4>
+            </div>
+
+            <div style="height: 10px; background-color: white;"></div>
+
+            <div class="ama-in-lay">
+                <div id="am-7" class="ama-short-4">
+                    <div></div>
+                </div>
+
+                <div id="am-8" class="ama-short-4">
+                    <div></div>
+                </div>
+            </div>
+            <div class="ama-in-lay">
+                <h4 style="font-size:smaller;">Kitchen storage</h4>
+
+                <h4 style="font-size:smaller;">Tableware</h4>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 4px;"></div>
+
+    <div class="c2nd">
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-6"></div>
+            <div class="slbox-info">
+                <h5>Saree</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 1390</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-7"></div>
+            <div class="slbox-info">
+                <h5>Oximeter</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 200</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-8"></div>
+            <div class="slbox-info">
+                <h5>Masks</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 200</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-9"></div>
+            <div class="slbox-info">
+                <h5>Rudraksh</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 150</h6>
+            </div>
+        </div>
+        <div class="ck" style="cursor: pointer;">
+            <div class="hii" id="c2-10"></div>
+            <div class="slbox-info">
+                <h5>Shocks</h5>
+                <h6>⭐⭐⭐⭐⭐</h6>
+                <h6>Rs. 100</h6>
+            </div>
+        </div>
+    </div>
+    <!--22222222222222222222222222222222222222222222222-->
+    <div class="electonic">
+
+        <div style="height:50px; border: 1px solid #eef1f1;display: flex;align-items: center;">
+            <h4 style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Top Deals On Electronics</h4>
+        </div>
+
+        <div>
+            <div class="containerrr">
+
+                <div id="carousel2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-none d-lg-block">
+                                <div class="slide-box">
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi1"></div>
+                                        <div class="slbox-info">
+                                            <h5>T-shirt</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 900</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi2"></div>
+                                        <div class="slbox-info">
+                                            <h5>Rudraksh mala</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 250</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi3"></div>
+                                        <div class="slbox-info">
+                                            <h5>Leather Wallet</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 300</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi4"></div>
+                                        <div class="slbox-info">
+                                            <h5>Cutter</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 450</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi5"></div>
+                                        <div class="slbox-info">
+                                            <h5>Purse</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 200</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-none d-lg-block">
+                                <div class="slide-box">
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi6"></div>
+                                        <div class="slbox-info">
+                                            <h5>Saree</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 1390</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi7"></div>
+                                        <div class="slbox-info">
+                                            <h5>Oximeter</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 200</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi8"></div>
+                                        <div class="slbox-info">
+                                            <h5>Masks</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 200</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi9"></div>
+                                        <div class="slbox-info">
+                                            <h5>Rudraksh</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 150</h6>
+                                        </div>
+                                    </div>
+                                    <div class="ck" style="cursor: pointer;">
+                                        <div class="hii" id="hi10"></div>
+                                        <div class="slbox-info">
+                                            <h5>Shocks</h5>
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <h6>Rs. 100</h6>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--22222222222222222222222222222222222222222222222222222222222-->
+    
+    <!--3333333333333333333-->
+
+    <div class="containerrr">
+        <div class="row">
+            <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                <div class="MultiCarousel-inner">
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                            <p>₹ 6000</p>
+                            <p>50% off</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                            <p>₹ 6000</p>
+                            <p>50% off</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                            <p>₹ 6000</p>
+                            <p>50% off</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                            <p>₹ 6000</p>
+                            <p>50% off</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                            <p>₹ 6000</p>
+                            <p>50% off</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                            <p>₹ 6000</p>
+                            <p>50% off</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                            <p>₹ 6000</p>
+                            <p>50% off</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <p class="lead">Multi Item Carousel</p>
+                            <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div id="pad155" style="height: 100%; width: 100%;"></div>
+                       
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary leftLst"><</button>
+            <button class="btn btn-primary rightLst">></button>
+        </div>
+	</div>
+	<div class="row">
+	    <div class="col-md-12 text-center">
+	        <br/><br/><br/>
+	        <hr/>
+	        <p>Settings</p>
+	        <p>Change data items for xs,sm,md and lg display items respectively. Ex:data-items="1,3,5,6"</p>
+	        <p>Change data slide for slides per click Ex:data-slide="1"</p>
+	    </div>
+	</div>
+</div>
+    <!--3333333333333333333333333-->
+
+
+
+
+    <div style="background-color: rgb(27, 23, 23); height: 400px; width: 100%;">
+
+    </div>
+
+    <script src="style.js"></script>
+</body>
+
+</html>
