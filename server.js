@@ -11,11 +11,7 @@
 
 // app.get('/', (req, res) => {
 //     res.render('home')
-// EDit by ak
-//////
-///////
-///////
-//////
+
 const express = require("express");
 const bodyParser = require("body-parser");
 
