@@ -10,8 +10,7 @@
 // app.set('view engine', 'ejs');
 
 // app.get('/', (req, res) => {
-//     res.render('home');
-// })
+//     res.render('home')
 
 const express = require("express");
 const bodyParser = require("body-parser");
