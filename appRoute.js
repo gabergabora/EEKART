@@ -10,12 +10,16 @@ module.exports = function(app) {
             "Access-Control-Allow-Headers",
             "Origin, X-Requested-With, Content-Type, Accept"
         );
+
+       
+
         next();
     });
 
     app.all("/", rendering.home);
     app.all("/signin", rendering.signin);
     app.get("/addproduct", rendering.addproduct);
+    app.all("/product", rendering.product);
     app.all("/test", Controller.test);
     app.post("/addproduct", Controller.addproduct);
 

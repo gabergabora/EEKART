@@ -10,22 +10,27 @@
 // app.set('view engine', 'ejs');
 
 // app.get('/', (req, res) => {
-//     res.render('home')
+//     res.render('home');
+// })
 
 const express = require("express");
 const bodyParser = require("body-parser");
 
 var sql = require("./db")
 
-const app = express();
+const ap = express();
 
 const path = require('path');
-app.use(express.static(__dirname + '/public'));
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+ap.use(express.static(__dirname + '/public'));
+ap.set('views', path.join(__dirname, 'views'));
+ap.set('view engine', 'ejs');
 
-port = 3000;
-app.listen(port, () => {
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
+
+ap.listen(port, () => {
     console.log("::::::::::::::::: | Project: Ecart | :::::::::::::");
     console.log("Date: " + new Date());
     console.log("Api server started on: " + port);
@@ -34,9 +39,9 @@ app.listen(port, () => {
 
 
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+ap.use(bodyParser.urlencoded({ extended: true }));
+ap.use(bodyParser.json());
 
-var routes = require(".//appRoute");
+var routes = require("./appRoute");
 
-routes(app);
+routes(ap);
