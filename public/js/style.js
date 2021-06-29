@@ -1,4 +1,37 @@
 ////parth no code
+function hei(pdff){
+
+    location.replace("https://eekaart.herokuapp.com/product");
+    
+    // document.getElementById(pdff).children[1].innerHTML="hii";
+    localStorage.setItem("pmk", document.getElementById(pdff).children[1].children[0].innerHTML);
+    localStorage.setItem("mkp", document.getElementById(pdff).children[1].children[1].innerHTML);
+    localStorage.setItem("kmp", document.getElementById(pdff).children[1].children[2].innerHTML);
+    localStorage.setItem("kkk", document.getElementById(pdff).children[0].children[0].src);
+    localStorage.setItem("1n", document.getElementById(pdff).children[0].children[1].src);
+    localStorage.setItem("2n", document.getElementById(pdff).children[0].children[2].src);
+    localStorage.setItem("3n", document.getElementById(pdff).children[0].children[3].src);
+
+
+  }
+
+  function heei(pdff){
+
+    location.replace("https://eekaart.herokuapp.com/product");
+    
+    // document.getElementById(pdff).children[1].innerHTML="hii";
+    localStorage.setItem("pmk", document.getElementById(pdff).children[0].children[1].children[0].innerHTML);
+    localStorage.setItem("mkp", document.getElementById(pdff).children[0].children[1].children[1].innerHTML);
+    localStorage.setItem("kmp", document.getElementById(pdff).children[0].children[1].children[2].innerHTML);
+    localStorage.setItem("kkk", document.getElementById(pdff).children[0].children[0].children[0].src);
+    localStorage.setItem("1n", document.getElementById(pdff).children[0].children[1].src);
+    localStorage.setItem("2n", document.getElementById(pdff).children[0].children[2].src);
+    localStorage.setItem("3n", document.getElementById(pdff).children[0].children[3].src);
+
+
+  }
+
+
 function change() {
     var x = document.getElementById('input');
 
@@ -14,6 +47,56 @@ const showCart = () => {
 
 
 }
+
+// const productPage = () => {
+//     document.getElementById("TEST").children[1].innerHTML="hii";
+    
+//     location.replace("http://localhost:3000/product");
+     
+//     //  document.getElementById("xuxu").innerHTML;
+//     // document.getElementById("TEST").children[1].innerHTML;
+   
+ 
+    
+
+     
+// }
+// document.getElementById("xuxu").innerHTML="helo";
+
+
+
+
+
+
+// document.getElementById("TEST").addEventListener('click', function(e) {
+//     e = e || window.event;
+//     console.log("this is", this);
+//     console.log("e", e);
+//     console.log("e.target", e.target)
+//     var target = e.target || e.srcElement,
+//         text = target.textContent || target.innerText;
+//     console.log(
+//         "TEST"
+//     );
+// }, false);
+
+// const productPage=()=>{
+//     var x=document.getElementById("TEST");
+//     const child=x.children[1];
+//     var y=document.getElementsByClassName("title");
+//     y.children[0].innerHTML=child.innerHTML;
+// }
+
+function toggleSidebar(ref) {
+
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("sidebar").classList.toggle('active');
+}
+
+
+
+
+
 
 $(document).ready(function() {
     var itemsMainDiv = ('.MultiCarousel');
@@ -116,8 +199,9 @@ $(document).ready(function() {
 });
 
 function signin() {
-    location.replace("http://localhost:3000/signin");
+    location.replace("https://eekaart.herokuapp.com/signin");
 }
+
 function retn() {
-    location.replace("http://localhost:3000");
+    location.replace("https://eekaart.herokuapp.com/");
 }

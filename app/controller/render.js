@@ -12,5 +12,13 @@ exports.addproduct = function(req, res) {
 
 exports.signin = function(req, res) {
     res.render('signin');
-    res.redirect('home');
+    // res.redirect('home');
+    // res.redirect('https://eekaart.herokuapp.com');
+}
+
+exports.product = function(req, res) {
+    res.render("product");
+    res.redirect('https://eekaart.herokuapp.com');
+    // const params = req.body;
+    // console.log(params);
 }

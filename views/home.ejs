@@ -12,7 +12,7 @@
 
 
     <link href="/css/style.css" rel="stylesheet" type="text/css">
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -27,19 +27,96 @@
 
 <body id="Body">
 
-    
-    <div class="containerr">
-        <div class="Divv">
-            <div class="logo">
-                <h3 style="font-weight: bold;">E Kart</h3>
-                <div class=dropdown>
 
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar(this)">
+            <span style="height: 40px;width: 40px;background-color: rgb(240, 12, 88);"><i style="height: 100%;width: 100%;" class="fas fa-arrow-circle-left fa-4x"></i></span>
+        </div>
+        <div style="margin-top: 12px;display: flex;justify-content: center;align-items: center;background-color: rgb(240, 12, 88);">
+            <h2 style="color:white;font-weight: bold;background-color: rgb(240, 12, 88);">Top Categories</h2>
+        </div>
+        <div class="list" style="padding-top:10px;">
+            <div class="item" style="display:flex;justify-content: center;align-items: center;background-color: rgb(240, 12, 88); height: 30px;">Techno</div>
+            <div class="item" style="display:flex;justify-content: center;align-items: center;background-color: rgb(240, 12, 88); height: 30px;">Consmetics</div>
+            <div class="item" style="display:flex;justify-content: center;align-items: center;background-color: rgb(240, 12, 88); height: 30px;">Mobiles</div>
+            <div class="item" style="display:flex;justify-content: center;align-items: center;background-color: rgb(240, 12, 88); height: 30px;">Electronics</div>
+            <div class="item" style="display:flex;justify-content: center;align-items: center;background-color: rgb(240, 12, 88); height: 30px;">Wears</div>
+            <div class="item" style="display:flex;justify-content: center;align-items: center;background-color: rgb(240, 12, 88); height: 30px;">Kitchen</div>
+            <!-- <div class="item">Home</div>
+          
+          <div class="item">Gallery</div>
+          <div class="item">Contact us</div> -->
+        </div>
+    </div>
+
+
+
+
+
+    <div id="EKART" class="containerr">
+
+        <div class="mo-container" id="mo-t">
+
+            <div class="mo-container-up">
+
+                <div style="width: 50%;height: 100%;display:inline-flex; background-color: rgb(240, 12, 88);">
+                    <div class="mo-container-contents">
+                        <i onclick="toggleSidebar(this)" style="border: none;color: black; background-color: rgb(240, 12, 88);color: white;" class="fas fa-bars fa-3x"></i>
+                    </div>
+                    <div class="mo-container-contents" id="mo-logo">
+
+                        <a href="#EKART" style="text-decoration: none;">
+                            <h1 style="height: 100%;width: 100%;font-weight: bold;color: khaki; background-color: rgb(240, 12, 88); cursor: pointer;">E Kart</h1>
+                        </a>
                     </div>
                 </div>
+                <div style="width: 50%;height: 100%;display:flex;justify-content: space-around; background-color: rgb(240, 12, 88);">
+                    <div class="mo-container-contents" id="mo-container-up-cart">
+                        <i class="fas fa-shopping-cart fa-3x" style=" height: 100%;width: 100%; background-color: rgb(240, 12, 88);color: white;"></i>
+                    </div>
+                    <div class="mo-container-contents" id="mo-container-up-login">
+                        <button onclick="signin()" style="border: none; height: 100%;width: 100%; background-color: rgb(240, 12, 88);"><h2 style=" background-color: rgb(240, 12, 88);color: white;">Login</h2></button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="mo-container-down">
+
+                <input type="search" placeholder="What are you looking for?" class="mo-input" name="" />
+                <div class="mo-serch"><i style=" background-color: rgb(240, 12, 88); color: white;" class="fas fa-search fa-2x"></i></div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="Divv">
+            <div class="logo">
+                <h3 style="font-weight: bold;"><a href="#EKART" style="text-decoration: none; color: khaki;">E Kart</a></h3>
+
             </div>
 
             <div class="inbn">
@@ -62,12 +139,15 @@
             </button>
             <div class="sign_in" onclick="signin()">
                 <div class="dropdown_2" style="background-color: rgb(240, 12, 88);">
-                    
+
 
                 </div>
-                <span class="sign-inn" style="background-color: rgb(240, 12, 88);"><h5 >Sign in</h5></span>
+                <div class="sign-hovering" style="background-color: rgb(240, 12, 88);display: flex;">
+                    <span class="sign-inn" style="background-color: rgb(240, 12, 88);"><h5 >Sign in</h5></span>
 
-                <span style="background-color: rgb(240, 12, 88);"><h5><i class="fas fa-user-circle" style="background-color: rgb(240, 12, 88); height: 5px;" ></i></h5></span>
+                    <span style="background-color: rgb(240, 12, 88);"><h5><i class="fas fa-user-circle" style="background-color: rgb(240, 12, 88); height: 5px;" ></i></h5></span>
+
+                </div>
 
             </div>
 
@@ -75,6 +155,79 @@
         </div>
 
     </div>
+
+
+    <!--mobile-->
+    <div class="mo-jio-mart-content">
+        <div class="mo-jio-mart-content-title">
+            <h3 style="font-weight: bold;">Shop from Top Categories</h3>
+        </div>
+
+
+        <div class="mo-jio-mart-content-items">
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1612274538_paneer.jpg" alt="" srcset="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1602257194_Atta_Web.jpg" alt="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1598825980_1598704463_Biscuits-Cookies.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="mo-jio-mart-content-items">
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1612272383_kidswear.jpg" alt="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1612272459_womenwear.jpg" alt="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1606400616_Top-Categories-03.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="mo-jio-mart-content-items">
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1598824690_1598720641_Shampoos_Conditioners.jpg" alt="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1598824614_1598720607_tea.jpg" alt="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1598824614_1598720607_tea.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="mo-jio-mart-content-items">
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1604594445_womenetinic_web.jpg" alt="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1606400641_Top-Categories-01.jpg" alt="">
+            </div>
+            <div class="mo-jio-mart-content-items-nest">
+                <img src="https://www.jiomart.com/images/category/6/thumb/0-6.png?v=1607022291" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!--mobile-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="grid_1" style="width: 100%;">
         <div class="left-grid-1">
             <div style="height: 10vh;display: flex;justify-content: center;align-items: center;">
@@ -86,7 +239,7 @@
             </div>
             <div class="category">
                 <div class="category-logo" id="l2"></div>
-                <h6 style="background-color: white; margin-left: 8px;"><a style="text-decoration: none;color: black;" href="#ad-1-caro">Electronics</a>  </h6>
+                <h6 style="background-color: white; margin-left: 8px;"><a style="text-decoration: none;color: black;" href="#ad-1-caro">Electronics</a> </h6>
             </div>
             <div class="category">
                 <div class="category-logo" id="l3"></div>
@@ -107,10 +260,10 @@
 
         </div>
 
-        <div class="content" style="background-color:#deedf0; height: 450px; width: 100%;">
+        <div class="content" style="background-color:#deedf0; height: 310px; width: 100%;">
 
 
-            <div style="width: 100%;">
+            <div class="cdd" style="width: 100%;">
                 <!--carousel bootstrap-->
                 <div id="carouselExampleIndicators" class="carousel slide inner-content" data-ride="carousel" style="width: 100%;">
                     <!-- <ol class="carousel-indicators">
@@ -144,29 +297,46 @@
 
 
             <div class="content2" style="width: 100%;">
-                <div class="inner-content">
-                    <div class="products" id="p1"><img src="https://n2.sdlcdn.com/imgs/i/z/i/large/HMTe-HM-9072-Metal-Analog-SDL494827480-1-db8fc.jpg" alt=""></div>
-                    <h6>Men watch</h6>
+                <div id="vvsl" onclick="hiei('vvsl');" class="inner-content">
+                    <div class="products" id="p1">
+                        <img src="https://n2.sdlcdn.com/imgs/i/z/i/large/HMTe-HM-9072-Metal-Analog-SDL494827480-1-db8fc.jpg" alt="">
+                        <img src="https://n1.sdlcdn.com/imgs/h/7/v/HMTe-HM-9072-Metal-Analog-SDL494827480-2-9b696.jpg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n4.sdlcdn.com/imgs/h/7/v/HMTe-HM-9072-Metal-Analog-SDL494827480-3-d21bc.jpg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n1.sdlcdn.com/imgs/h/7/v/HMTe-HM-9072-Metal-Analog-SDL494827480-4-471a3.jpg" alt="" class="nodekh" style="display: none;">
+                    </div>
+                    <h6 >Men watch</h6>
                     <h6>⭐⭐⭐⭐⭐</h6>
                     <h6>Rs. 10999</h6>
-
-
-
                 </div>
-                <div class="inner-content">
-                    <div class="products" id="p2"><img src="https://n2.sdlcdn.com/imgs/d/g/t/large/Vertical9-Heavy-Duty-666-Electric-SDL717689962-1-f9c62.jpg" alt=""></div>
+                <div id="vvdl" onclick="hiei('vvdl');" class="inner-content">
+                    <div class="products" id="p2">
+                        <img src="https://n2.sdlcdn.com/imgs/d/g/t/large/Vertical9-Heavy-Duty-666-Electric-SDL717689962-1-f9c62.jpg" alt="">
+                        <img src="https://n3.sdlcdn.com/imgs/e/8/l/Vertical9-Heavy-Duty-Powerful-Salon-SDL048840334-2-41eab.jpg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n4.sdlcdn.com/imgs/e/8/l/Vertical9-Heavy-Duty-Powerful-Salon-SDL048840334-3-99179.jpg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n3.sdlcdn.com/imgs/e/8/l/Vertical9-Heavy-Duty-Powerful-Salon-SDL048840334-4-b7d62.jpg" alt="" class="nodekh" style="display: none;">
+                    </div>
                     <h6>Beard Trimmer </h6>
                     <h6>⭐⭐⭐⭐⭐ </h6>
                     <h6>Rs. 1500 </h6>
                 </div>
-                <div class="inner-content">
-                    <div class="products" id="p3"><img src="https://n1h2.sdlcdn.com/imgs/j/q/i/large/Sherine-Yellow-Georgette-Saree-SDL411665078-1-612f1.webp" alt=""></div>
+                <div id="vvs" onclick="hiei('vvs');" class="inner-content">
+                    <div class="products" id="p3">
+                        <img src="https://n1h2.sdlcdn.com/imgs/j/q/i/large/Sherine-Yellow-Georgette-Saree-SDL411665078-1-612f1.webp" alt="">
+                        <img src="https://n4.sdlcdn.com/imgs/j/q/i/Sherine-Yellow-Georgette-Saree-SDL411665078-2-57eea.jpg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n4.sdlcdn.com/imgs/j/q/i/Sherine-Yellow-Georgette-Saree-SDL411665078-3-9767e.jpg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n2.sdlcdn.com/imgs/j/q/i/Sherine-Yellow-Georgette-Saree-SDL411665078-4-12d06.jpg" alt="" class="nodekh" style="display: none;">
+                    </div>
                     <h6>Yellow Geortee Saree</h6>
                     <h6>⭐⭐⭐⭐⭐</h6>
                     <h6>Rs. 1250</h6>
                 </div>
-                <div class="inner-content">
-                    <div class="products" id="p4"><img src="https://n1h2.sdlcdn.com/imgs/j/k/g/large/FORBRO-NEW-DESIGN-FOOTBALL-TRACKPANT-SDL719062393-1-ffc56.webp" alt=""></div>
+                <div id="lax" onclick="hiei('lax');" class="inner-content">
+                    <div class="products" id="p4">
+                        <img src="https://n1h2.sdlcdn.com/imgs/j/k/g/large/FORBRO-NEW-DESIGN-FOOTBALL-TRACKPANT-SDL719062393-1-ffc56.webp" alt="">
+                        <img src="https://n2.sdlcdn.com/imgs/j/s/w/FORBRO-NEW-DESIGN-FOOTBALL-TRACKPANT-SDL725642261-2-ae9ac.jpeg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n2.sdlcdn.com/imgs/j/s/w/FORBRO-NEW-DESIGN-FOOTBALL-TRACKPANT-SDL725642261-3-e1404.jpeg" alt="" class="nodekh" style="display: none;">
+                        <img src="https://n2.sdlcdn.com/imgs/j/s/w/FORBRO-NEW-DESIGN-FOOTBALL-TRACKPANT-SDL725642261-4-39838.jpeg" alt="" class="nodekh" style="display: none;">
+                    </div>
 
                     <h6>TrackPants</h6>
                     <h6>⭐⭐⭐⭐⭐</h6>
@@ -197,15 +367,16 @@
                 <div class="carousel-item active">
                     <div class="d-none d-lg-block">
                         <div class="slide-box">
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-1" onclick="hei('c-a-1');" class="ck" style="cursor: pointer;">
                                 <div class="hii"><img src="https://n1.sdlcdn.com/imgs/j/i/k/large/Veirdo-100-Percent-Cotton-Multi-SDL069050945-1-051a7.jpeg" alt=""></div>
                                 <div class="slbox-info">
-                                    <h5>T-shirt</h5>
+                                    <h6>T-shirt</h6>
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h6>Rs. 900</h6>
+
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-2" onclick="hei('c-a-2');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi2"><img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Rudraksh mala</h5>
@@ -213,7 +384,7 @@
                                     <h6>Rs. 250</h6>
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-3" onclick="hei('c-a-3');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi3"><img src="https://n3.sdlcdn.com/imgs/i/z/m/large/pRd-PU-Tan-Casual-Long-SDL867879071-1-a7867.jpeg" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Leather Wallet</h5>
@@ -221,7 +392,7 @@
                                     <h6>Rs. 300</h6>
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-4" onclick="hei('c-a-4');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi4"><img src="https://n1.sdlcdn.com/imgs/i/z/e/large/Bentag-Vegetable-Fruit-Clever-Cutter-SDL841893040-1-ea5e3.jpg" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Cutter</h5>
@@ -229,7 +400,7 @@
                                     <h6>Rs. 450</h6>
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-5" onclick="hei('c-a-5');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi5"><img src="https://n1.sdlcdn.com/imgs/i/3/9/large/DARK-ROMANCE-Faux-Leather-Beige-SDL899800683-1-500e3.jpeg" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Purse</h5>
@@ -244,7 +415,7 @@
                 <div class="carousel-item">
                     <div class="d-none d-lg-block">
                         <div class="slide-box">
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-6" onclick="hei('c-a-6');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi6"><img src="https://n1h2.sdlcdn.com/imgs/j/o/q/large/Sherine-Green-Printed-Saree-Fabric-SDL059677053-1-72fc8.webp" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Saree</h5>
@@ -252,7 +423,7 @@
                                     <h6>Rs. 1390</h6>
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-7" onclick="hei('c-a-7');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi7"><img src="https://n1h2.sdlcdn.com/imgs/g/l/y/large/Dr-Morepen-Blood-Glucose-Monitor-SDL042886907-1-352ec.webp" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Oximeter</h5>
@@ -260,7 +431,7 @@
                                     <h6>Rs. 200</h6>
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-8" onclick="hei('c-a-8');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi8"><img src="https://n1h2.sdlcdn.com/imgs/j/g/c/large/Sona-N95-Reusable-Anti-Pollution-SDL803096613-1-a4dce.webp" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Masks</h5>
@@ -268,7 +439,7 @@
                                     <h6>Rs. 200</h6>
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-9" onclick="hei('c-a-9');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi9"><img src="https://n1h2.sdlcdn.com/imgs/j/a/8/large/Shiv-Shakti-Kavach-5-Mala-SDL443330653-1-a0955.webp" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Rudraksh</h5>
@@ -276,12 +447,13 @@
                                     <h6>Rs. 150</h6>
                                 </div>
                             </div>
-                            <div class="ck" style="cursor: pointer;">
+                            <div id="c-a-10" onclick="hei('c-a-10');" class="ck" style="cursor: pointer;">
                                 <div class="hii" id="hi10"><img src="https://n1h2.sdlcdn.com/imgs/i/6/2/large/youshee-Multi-Casual-Ankle-Length-SDL524484945-1-1e833.webp" alt=""></div>
                                 <div class="slbox-info">
                                     <h5>Shocks</h5>
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h6>Rs. 100</h6>
+
                                 </div>
                             </div>
                         </div>
@@ -305,56 +477,56 @@
 
     <!--cs3-->
 
-    
+
     <!--cs3-->
 
     <div style="height: 2px;"></div>
     <div class="c2nd">
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-1" onclick="hei('c-a1-1');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-1"><img src="https://n1h2.sdlcdn.com/imgs/j/i/p/large/HOMETALES-Microfibre-Single-Bedsheet-with-SDL304632326-1-c5366.webp" alt=""></div>
             <div class="slbox-info">
-                <h5>Saree</h5>
+                <h5>Bed & Bed sheet</h5>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 1390</h6>
+                <h6>Rs. 10,000</h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-2" onclick="hei('c-a1-2');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-2"><img src="https://n4.sdlcdn.com/imgs/j/r/4/large/Liberty-Brown-Slippers-SDL486957908-1-66d14.jpeg" alt=""></div>
             <div class="slbox-info">
-                <h5>Oximeter</h5>
+                <h5>Footwear</h5>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 200</h6>
+                <h6>Rs. 250</h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-3" onclick="hei('c-a1-3');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-3"><img src="https://n3.sdlcdn.com/imgs/j/f/c/large/SM-2-in-1-Rechargeable-SDL951195659-1-126be.jpg" alt=""></div>
             <div class="slbox-info">
-                <h5>Masks</h5>
+                <h5>Torch</h5>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 200</h6>
+                <h6>Rs. 900 </h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-4" onclick="hei('c-a1-4');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-4"><img src="https://n1h2.sdlcdn.com/imgs/j/s/v/large/UBON-BASS-FACTORY-BLUETOOTH-5100-SDL777581461-1-1f49b.webp" alt=""></div>
             <div class="slbox-info">
-                <h5>Rudraksh</h5>
+                <h5>Earphone</h5>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 150</h6>
+                <h6>Rs. 1800</h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-5" onclick="hei('c-a1-5');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-5"><img src="https://n1h2.sdlcdn.com/imgs/i/w/n/large/HMTI-Metal-Asymmetrical-Womens-Watch-SDL955082433-1-d8e08.webp" alt=""></div>
             <div class="slbox-info">
-                <h5>Shocks</h5>
+                <h5>Watch</h5>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 100</h6>
+                <h6>Rs. 1500</h6>
             </div>
         </div>
     </div>
 
     <div style="height: 4px;"></div>
 
-<!--ssssssssssssssssssss-->
+    <!--ssssssssssssssssssss-->
     <div class="ama-lay">
         <div class="ama-main3">
             <div>
@@ -381,7 +553,7 @@
                 </div>
 
                 <div id="am-03" class="ama-short-4">
-                  <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/HeroDec-20/MSO-Dec/B084DWH53T_306x250._SY232_CB413798916_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/HeroDec-20/MSO-Dec/B084DWH53T_306x250._SY232_CB413798916_.jpg" alt="">
                 </div>
             </div>
             <div class="ama-in-lay">
@@ -414,7 +586,7 @@
 
             <div class="ama-in-lay">
                 <div id="am-3" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Sports/PC_QC_DB_H._SY232_CB406090888_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Sports/PC_QC_DB_H._SY232_CB406090888_.jpg" alt="">
                 </div>
 
                 <div id="am-4" class="ama-short-4">
@@ -438,7 +610,7 @@
                 <div id="am-5" class="ama-short-4"><img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2019/img/Kitchen/XCM_Manual_372x232_1198417XCM_Manual_1198417__1_1573567224_jpg_LOWER_QL85_._SY232_CB448746450_.jpg" alt=""></div>
 
                 <div id="am-6" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2019/img/Kitchen/XCM_Manual_372x232_1198417XCM_Manual_1198417__2_1573567224_jpg_LOWER_QL85_._SY232_CB448746407_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2019/img/Kitchen/XCM_Manual_372x232_1198417XCM_Manual_1198417__2_1573567224_jpg_LOWER_QL85_._SY232_CB448746407_.jpg" alt="">
                 </div>
             </div>
             <div class="ama-in-lay">
@@ -451,11 +623,11 @@
 
             <div class="ama-in-lay">
                 <div id="am-7" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2019/img/Kitchen/XCM_Manual_372x232_1198417XCM_Manual_3_copy_1573713358_jpg_LOWER_QL85_._SY232_CB448746425_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2019/img/Kitchen/XCM_Manual_372x232_1198417XCM_Manual_3_copy_1573713358_jpg_LOWER_QL85_._SY232_CB448746425_.jpg" alt="">
                 </div>
 
                 <div id="am-8" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2019/img/Kitchen/XCM_Manual_372x232_1198417XCM_Manual_1198417__4_1573567224_jpg_LOWER_QL85_._SY232_CB448746407_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2019/img/Kitchen/XCM_Manual_372x232_1198417XCM_Manual_1198417__4_1573567224_jpg_LOWER_QL85_._SY232_CB448746407_.jpg" alt="">
                 </div>
             </div>
             <div class="ama-in-lay">
@@ -465,56 +637,56 @@
             </div>
         </div>
     </div>
-<!--hhhhhhhhhhhhhhhhhhhhhhhhhh-->
+    <!--hhhhhhhhhhhhhhhhhhhhhhhhhh-->
     <div style="height: 4px;"></div>
 
     <div class="c2nd">
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-6" onclick="hei('c-a1-6');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-6"><img src="https://rukminim1.flixcart.com/image/300/300/jku1ksw0/cargo/t/z/p/42-code-1-plus91-original-imaf83hx5tzvddwh.jpeg?q=70" alt=""></div>
             <div class="slbox-info">
-                <h5>Saree</h5>
+                <h6>TrackPant</h6>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 1390</h6>
+                <h6>Rs. 890</h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-7" onclick="hei('c-a1-7');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-7"><img src="https://n1h2.sdlcdn.com/imgs/j/m/6/large/Arizona-Sunglasses-Wayfarer-Polycarbonate-Purple-SDL674516153-1-36e07.webp" alt=""></div>
             <div class="slbox-info">
-                <h5>Oximeter</h5>
+                <h6>Sun glass</h6>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 200</h6>
+                <h6>Rs. 399</h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-8" onclick="hei('c-a1-8');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-8"><img src="https://n1.sdlcdn.com/imgs/j/s/v/230X258_sharpened/Armado-1513-BROWN-Rubber-Analog-SDL620283859-1-eeeee.webp" alt=""></div>
             <div class="slbox-info">
-                <h5>Masks</h5>
+                <h6>Watch</h6>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 200</h6>
+                <h6>Rs. 290</h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-9" onclick="hei('c-a1-9');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-9"><img src="https://rukminim1.flixcart.com/image/312/312/jl5h3m80/book/0/7/7/introduction-to-algorithms-original-imaf8cfwr7edgndb.jpeg?q=70" alt=""></div>
             <div class="slbox-info">
-                <h5>Rudraksh</h5>
+                <h6>Algorithms</h6>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 150</h6>
+                <h6>Rs. 2100</h6>
             </div>
         </div>
-        <div class="ck" style="cursor: pointer;">
+        <div id="c-a1-10" onclick="hei('c-a1-10');" class="ck" style="cursor: pointer;">
             <div class="hii" id="c2-10"><img src="https://rukminim1.flixcart.com/flap/300/300/image/fee02f6f97d3b66b.jpg?q=70" alt=""></div>
             <div class="slbox-info">
-                <h5>Shocks</h5>
+                <h6>Footwear</h6>
                 <h6>⭐⭐⭐⭐⭐</h6>
-                <h6>Rs. 100</h6>
+                <h6>Rs. 600</h6>
             </div>
         </div>
     </div>
     <!--22222222222222222222222222222222222222222222222-->
-    
+
     <!--22222222222222222222222222222222222222222222222222222222222-->
-    <div id="ad-1-caro" style="height:50px; border: 1px solid #eef1f1;display: flex;align-items: center;">
-        <h4 style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Top Deals On Electronics</h4>
+    <div class="c-tlt" id="ad-1-caro">
+        <h4 class="ctlt" style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Top Deals On Electronics</h4>
     </div>
     <!--3333333333333333333-->
 
@@ -522,575 +694,614 @@
         <div class="row">
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000" style="padding: 0;">
                 <div class="MultiCarousel-inner">
-                    <div class="itemc">
-                        <div class="pad15" style="padding: 0 ; margin: 0;height: 200px">
-                            <div class="pad155" >
+                    <div id="c1-a-1" onclick="heei('c1-a-1');" class="itemc">
+                        <div  class="pad15" style="padding: 0 ; margin: 0;height: 200px">
+                            <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/300/300/ja73ki80/webcam/pc-webcam/7/q/e/logitech-c310-original-imaeztzqny7jh7gh.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>logitech scaner</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 3000</h6>
                             </div>
-                            
+
                         </div>
-                        
-                        
+
+
                     </div>
-                    <div class="itemc">
+                    <div id="c1-a-2" onclick="heei('c1-a-2');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/400/400/k9d3p8w0/headphone/j/v/f/rockerz-255f-rockerz-255-boat-original-imafr68zshenv3ya.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Earphone</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 2000</h6>
                             </div>
                         </div>
-                       
-                       
+
+
                     </div>
-                    <div class="itemc" >
+                    <div id="c1-a-3" onclick="heei('c1-a-3');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/400/400/k5lcvbk0pkrrdj/headphone/dynamic/z/j/h/jbl-c150siublk-original-imafeyby52kxehz2.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>JBL earphone</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 1999</h6>
                             </div>
                         </div>
-                        
+
                     </div>
-                    
-                    <div class="itemc" >
+
+                    <div id="c1-a-4" onclick="heei('c1-a-4');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/300/300/k2f1n680/headphone/9/g/s/boat-rockerz-400-super-extra-bass-original-imafg95ztgz7z8yz.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Boat HeadPhone</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 3500</h6>
                             </div>
                         </div>
-                       
+
                     </div>
-                    <div class="itemc" >
+                    <div id="c1-a-5" onclick="heei('c1-a-5');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/300/300/jm9hfgw0/data-cable/hdmi-cable/f/z/y/terabyte-hdmi-to-vga-original-imaf97x2jw9kwkgy.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Cable</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 700</h6>
                             </div>
                         </div>
-                        
+
                     </div>
-                    <div class="itemc" >
+                    <div id="c1-a-6" onclick="heei('c1-a-6');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/300/300/k5lcvbk0pkrrdj/headphone/dynamic/z/j/h/jbl-c150siublk-original-imafeyby52kxehz2.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>JBL Earphone</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 1999</h6>
                             </div>
                         </div>
-                       
+
                     </div>
-                    <div class="itemc">
+                    <div id="c1-a-7" onclick="heei('c1-a-7');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/400/400/k4bms280/dth-new/c/m/h/set-top-connection-high-definition-tata-sky-original-imafn5sy8gfbqmvg.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>TATA Sky</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 2790</h6>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    <div class="itemc" >
+                    <div id="c1-a-8" onclick="heei('c1-a-8');" class="itemc">
                         <div class="pad15" style="padding: 0  ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/300/300/k52s58w0/headphone/q/v/b/zebronics-zeb-symphony-original-imafnuefzfhgz65x.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>EARPhone</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 2000</h6>
                             </div>
                         </div>
-                       
+
                     </div>
-                   
-                    
-                    
-                   
-                   
+
+
+
+
+
                 </div>
                 <button class="btn btn-primary leftLst kmal"><</button>
                 <button class="btn btn-primary rightLst kmal">></button>
             </div>
         </div>
-       
+
     </div>
     <!--3333333333333333333333333-->
-      
-    <div id="ad-2-caro" style="height:50px; border: 1px solid #eef1f1;display: flex;align-items: center;">
-        <h4 style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Cosmetics Brands</h4>
+
+    <div class="c-tlt" id="ad-2-caro">
+        <h4 class="ctlt" style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Cosmetics Brands</h4>
     </div>
 
 
-    <div class="add-1-carosul" >
+    <div class="add-1-carosul">
         <div class="row">
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
                 <div class="MultiCarousel-inner">
-                    
-                    <div class="itemc">
+
+                    <div id="c2-a-1" onclick="heei('c1-a-1');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://m.media-amazon.com/images/I/61um+vJjadL._AC_SX360_SY240_QL70_.jpg" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Make up</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 400</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c2-a-2" onclick="heei('c1-a-2');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/kh3qkcw0/combo-kit/g/f/e/cosmetic-blue-haven-mascara-6-5ml-eyeliner-water-proof-7-ml-original-imafx79uaghrp7hg.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Brush</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 250</h6>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="itemc">
+
+                    <div id="c2-a-3" onclick="heei('c2-a-3');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/kj4m0sw0-0/combo-kit/y/c/b/foundation-makeup-cosmetic-brush-natural-white-colour-waterproof-original-imafyrr6cpzxhsf2.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Pure red lip stick</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 500</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c2-a-4" onclick="heei('c2-a-4');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/kmns7m80/lipstick/u/v/2/6-check-matte-rise-of-red-renee-original-imagfgkagm8j4jpm.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>lipstick</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 300</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c2-a-5" onclick="heei('c2-a-5');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/kovsvbk0/lipstick/w/w/t/smudge-me-not-lip-duo-04-plum-yum-muted-plum-sugar-cosmetics-original-imag38dskhzzumva.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Brushes</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 200</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c2-a-6" onclick="heei('c2-a-6');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/k6pd7680/combo-kit/d/q/g/big-eyeshadow-pallete-with-highlighter-blusher-shades-35-colors-original-imafp3fhnsyvuax6.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>N-makeup Kit</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 3000</h6>
                             </div>
-                            
+
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c2-a-7" onclick="heei('c2-a-7');" class="itemc">
                         <div class="pad15" style="padding: 0  ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/kb89ea80/combo-kit/j/k/p/eyeshadow-palette-beauty-glazed-63-colors-pearlescent-matte-original-imafsmghpfn4ybhc.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>M-makeup kit</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 2000</h6>
                             </div>
                         </div>
                     </div>
-                   
-                    
-                    
-                   
-                   
+
+
+
+
+
                 </div>
                 <button class="btn btn-primary leftLst kmal"><</button>
                 <button class="btn btn-primary rightLst kmal">></button>
             </div>
         </div>
-       
+
     </div>
 
     <!--hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
-    <div style="height: 25px;"></div>
+    <div class="space" style="height: 25px;"></div>
 
-    <div id="ad-3-caro" style="height:50px; border: 1px solid #eef1f1;display: flex;align-items: center;">
-        <h4 style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Mobile & Tablets</h4>
+    <div class="c-tlt" id="ad-3-caro">
+        <h4 class="ctlt" style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Mobile & Tablets</h4>
     </div>
 
     <div class="add-1-carosul" id="mobilee">
         <div class="row">
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
                 <div class="MultiCarousel-inner">
-                    <div class="itemc" >
-                        <div class="pad15" style="padding: 0 ; margin: 0;">
-                            <div class="pad155" >
-                               <img src="https://rukminim1.flixcart.com/image/400/400/jxnksy80/tablet/u/h/h/samsung-sm-t290nzkains-original-imafg2ghyj9zhgnv.jpeg?q=70" alt="">
-                            </div>
-                            <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="itemc">
+                    <div id="c3-a-1" onclick="heei('c3-a-1');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
-                               <img src="https://rukminim1.flixcart.com/image/312/312/mobile/h/b/j/one-plus-one-na-original-imae8hh39tszhbbx.jpeg?q=70" alt="">
+                                <img src="https://rukminim1.flixcart.com/image/400/400/jxnksy80/tablet/u/h/h/samsung-sm-t290nzkains-original-imafg2ghyj9zhgnv.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Tablet</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 18,000</h6>
                             </div>
+
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c3-a-2" onclick="heei('c3-a-2');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
-                               <img src="https://rukminim1.flixcart.com/image/612/612/kklhbbk0/mobile/m/s/f/m3-mzb0879in-poco-original-imafzxf686qtxq2x.jpeg?q=70" alt="">
+                                <img src="https://rukminim1.flixcart.com/image/312/312/mobile/h/b/j/one-plus-one-na-original-imae8hh39tszhbbx.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Mobile</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 15,000</h6>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="itemc">
+                    <div id="c3-a-4" onclick="heei('c3-a-4');" class="itemc">
+                        <div class="pad15" style="padding: 0 ; margin: 0;">
+                            <div class="pad155">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/kklhbbk0/mobile/m/s/f/m3-mzb0879in-poco-original-imafzxf686qtxq2x.jpeg?q=70" alt="">
+                            </div>
+                            <div class="itemc-h5">
+                                <h6>POCO M3</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 23,000</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="c3-a-5" onclick="heei('c3-a-5');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/400/400/jd0jtzk0/cases-covers/back-cover/z/b/f/befunky-isimple-matte-finish-flexible-soft-tpu-skin-support-original-imafyfmje9mvkfea.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>i-phone x</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 50,000</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c3-a-6" onclick="heei('c3-a-6');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
-                               <img src="https://rukminim1.flixcart.com/image/612/612/kn22m4w0/mobile/9/k/s/galaxy-f12-sm-f127glbiins-samsung-original-imagftmhhhvghq7w.jpeg?q=70" alt="">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/kn22m4w0/mobile/9/k/s/galaxy-f12-sm-f127glbiins-samsung-original-imagftmhhhvghq7w.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Samsung F12</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 25,000</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c3-a-7" onclick="heei('c3-a-7');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
-                               <img src="https://rukminim1.flixcart.com/image/612/612/kfzq8i80/mobile/y/j/f/samsung-galaxy-f41-sm-f415fzbdins-original-imafwbnpdafmeuj6.jpeg?q=70" alt="">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/kfzq8i80/mobile/y/j/f/samsung-galaxy-f41-sm-f415fzbdins-original-imafwbnpdafmeuj6.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Samsung</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 21,000</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c3-a-8" onclick="heei('c3-a-8');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/k251k7k0/cases-covers/flip-cover/8/a/k/tgk-tgk-9726-original-imafhjus8nmpvgtz.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Desktop</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 6000</h6>
                             </div>
-                            
+
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c3-a-9" onclick="heei('c3-a-9');" class="itemc">
                         <div class="pad15" style="padding: 0  ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/knrsjgw0/mobile/u/f/w/8-5g-rmx3241-realme-original-imag2d8ett6ukhcs.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Realme 8 5G</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 20,000</h6>
                             </div>
                         </div>
-                        
+
                     </div>
-                   
-                    
-                    
-                   
-                   
+
+
+
+
+
                 </div>
                 <button class="btn btn-primary leftLst kmal"><</button>
                 <button class="btn btn-primary rightLst kmal">></button>
             </div>
         </div>
-       
+
     </div>
     <!--hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
-    <div style="height: 25px;"></div>
+    <div class="space" style="height: 25px;"></div>
 
-    <div id="ad-4-caro" style="height:50px; border: 1px solid #eef1f1;display: flex;align-items: center;">
-        <h4 style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Home makeover</h4>
+    <div class="c-tlt" id="ad-4-caro">
+        <h4 class="ctlt" style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Home makeover</h4>
     </div>
 
-    <div class="add-1-carosul" >
+    <div class="add-1-carosul">
         <div class="row">
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
                 <div class="MultiCarousel-inner">
-                    <div class="itemc" >
+                    <div id="c4-a-1" onclick="heei('c4-a-1');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
-                            <div class="pad155" >
+                            <div class="pad155">
                                 <img src="https://m.media-amazon.com/images/I/71dVpyFrWYS._AC_UL480_FMwebp_QL65_.jpg" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Crockery</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 500</h6>
                             </div>
-                            
+
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c4-a-2" onclick="heei('c4-a-2');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://m.media-amazon.com/images/I/61gVxPJTOrL._AC_UL480_FMwebp_QL65_.jpg" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Money-Plant</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 100</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c4-a-3" onclick="heei('c4-a-3');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://m.media-amazon.com/images/I/5192w7Na0pS._AC_UL480_FMwebp_QL65_.jpg" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Stuffs</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 400</h6>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="itemc" >
+
+                    <div id="c4-a-4" onclick="heei('c4-a-4');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/k0flmkw0/lunch-box/x/j/y/executive-milton-3-original-imafk8faa9hkxuzr.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Lunch Box</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 250</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c4-a-5" onclick="heei('c4-a-5');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://m.media-amazon.com/images/I/61X7aw9ZCDL._AC_UL480_FMwebp_QL65_.jpg" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Cleaning Stuffs</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 480</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c4-a-6" onclick="heei('c4-a-6');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/jzk5xu80/ice-cream-maker/t/g/b/ice01-whiteibis-original-imafjgnydtk6bd9u.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Plastic Stuffs</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 150</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c4-a-7" onclick="heei('c4-a-7');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/kksmikw0/otg-new/r/l/l/12624-pigeon-original-imagy2cbxwmdrups.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>oven</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 6000</h6>
                             </div>
-                            
+
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c4-a-8" onclick="heei('c4-a-8');" class="itemc">
                         <div class="pad15" style="padding: 0  ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/612/612/jubjte80/rack-shelf/k/3/g/aa167-huzain-handicrafts-original-imafa2rpsawvuggw.jpeg?q=70" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Frames</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 1500</h6>
                             </div>
                         </div>
                     </div>
-                   
-                    
-                    
-                   
-                   
+
+
+
+
+
                 </div>
                 <button class="btn btn-primary leftLst kmal"><</button>
                 <button class="btn btn-primary rightLst kmal">></button>
             </div>
         </div>
-       
+
     </div>
 
     <!--kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk-->
-    <div style="height: 25px;"></div>
+    <div class="space" style="height: 25px;"></div>
 
-    <div id="ad-5-caro" style="height:50px; border: 1px solid #eef1f1;display: flex;align-items: center;">
-        <h4 style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Wears</h4>
+    <div class="c-tlt" id="ad-5-caro">
+        <h4 class="ctlt" style="  background-color: #deedf0; padding-left:13px; font-weight: bold;">Wears</h4>
     </div>
 
     <div class="add-1-carosul" id="wearss">
         <div class="row">
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
                 <div class="MultiCarousel-inner">
-                    <div class="itemc" >
+                    <div id="c5-a-1" onclick="heei('c5-a-1');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
-                            <div class="pad155" >
+                            <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/keuagsw0/ethnic-set/z/n/c/m-kk074-p-kipek-original-imafvf8hsxfrmsyj.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Dress</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 980</h6>
                             </div>
-                            
+
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c5-a-2" onclick="heei('c5-a-2');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/kj1r53k0/jacket/y/r/s/m-dtaw20jk040a-ducati-original-imafype2527uy69d.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Denim shirt</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 785</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c5-a-3" onclick="heei('c5-a-3');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/kl6wx3k0/t-shirt/y/n/i/s-bbt-try-this-original-imagydarhsryeahn.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>T-shirt</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 890</h6>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="itemc" >
-                        <div class="pad15" style="padding: 0 ; margin: 0;" >
+
+                    <div id="c5-a-4" onclick="heei('c5-a-4');" class="itemc">
+                        <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/kffq2kw0/jacket/7/r/g/11-12-years-aw20i-jkdenim-b-pln-blgr-instafab-original-imafvw9wez6kyvfk.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Sweater</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 899</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc">
+                    <div id="c5-a-5" onclick="heei('c5-a-5');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/klgx0280/track-pant/o/w/g/xl-iltrp1atsr06666312-van-heusen-original-imagyhe2vva4gbp2.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Night wear</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 1299</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c5-a-6" onclick="heei('c5-a-6');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/ko1smfk0/sari/t/g/f/free-silver-butta-mr-creation-unstitched-original-imag2hj8qpbqeqpa.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Saree</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 2000</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c5-a-7" onclick="heei('c5-a-7');" class="itemc">
                         <div class="pad15" style="padding: 0 ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/jievpu80/shirt/p/q/z/xl-shirt-196-deeksha-original-imaf67nthqazxugu.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Formal Shirt</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 690</h6>
                             </div>
-                            
+
                         </div>
                     </div>
-                    <div class="itemc" >
+                    <div id="c5-a-8" onclick="heei('c5-a-8');" class="itemc">
                         <div class="pad15" style="padding: 0  ; margin: 0;">
                             <div class="pad155">
                                 <img src="https://rukminim1.flixcart.com/image/389/467/klicfww0/kids-dungaree-romper/0/2/o/6-12-months-catbluegana-6-12m-icable-original-imagymfh5grbzsfd.jpeg?q=50" alt="">
                             </div>
                             <div class="itemc-h5">
-                                <h5>logitech</h5>
-                                <h5>Rs. 2000</h5>
+                                <h6>Kids wear</h6>
+                                <h6>⭐⭐⭐⭐⭐</h6>
+                                <h6>Rs. 599</h6>
                             </div>
                         </div>
                     </div>
-                   
-                    
-                    
-                   
-                   
+
+
+
+
+
                 </div>
                 <button class="btn btn-primary leftLst kmal"><</button>
                 <button class="btn btn-primary rightLst kmal">></button>
             </div>
         </div>
-       
+
     </div>
 
 
 
-     <div style="height: 25px;"></div>
+    <div style="height: 25px;"></div>
 
-     <!--ssss-->
+    <!--ssss-->
 
-     <div class="ama-lay">
+    <div class="ama-lay">
         <div class="ama-main3">
             <div>
                 <h4 style="font-weight: bold; padding: 0 0;">Styles for Men | Up to 70% offt</h4>
@@ -1116,7 +1327,7 @@
                 </div>
 
                 <div id="am-03" class="ama-short-4">
-                  <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Fashion/Gateway/Mens_fashion/04._SY232_CB656503011_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Fashion/Gateway/Mens_fashion/04._SY232_CB656503011_.jpg" alt="">
                 </div>
             </div>
             <div class="ama-in-lay">
@@ -1149,7 +1360,7 @@
 
             <div class="ama-in-lay">
                 <div id="am-3" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Fashion/Gateway/Womens_Fashion/Layer_670._SY232_CB656506084_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Fashion/Gateway/Womens_Fashion/Layer_670._SY232_CB656506084_.jpg" alt="">
                 </div>
 
                 <div id="am-4" class="ama-short-4">
@@ -1173,7 +1384,7 @@
                 <div id="am-5" class="ama-short-4"><img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/2020/PC/Fresh._SY232_CB431401553_.jpg" alt=""></div>
 
                 <div id="am-6" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/2020/PC/Mobile._SY232_CB431401553_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/2020/PC/Mobile._SY232_CB431401553_.jpg" alt="">
                 </div>
             </div>
             <div class="ama-in-lay">
@@ -1186,11 +1397,11 @@
 
             <div class="ama-in-lay">
                 <div id="am-7" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/2020/PC/Fashion._SY232_CB431401553_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/2020/PC/Fashion._SY232_CB431401553_.jpg" alt="">
                 </div>
 
                 <div id="am-8" class="ama-short-4">
-                   <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/2020/PC/Electronic._SY232_CB431401553_.jpg" alt="">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/2020/PC/Electronic._SY232_CB431401553_.jpg" alt="">
                 </div>
             </div>
             <div class="ama-in-lay">
@@ -1201,63 +1412,83 @@
         </div>
     </div>
 
-     <!--sss-->
+    <!--sss-->
 
-     <div style="height: 7px;"></div>
+    <div style="height: 7px;"></div>
 
 
     <div style="background-color: #002E6E; height: 400px; width: 100%;">
-       <div class="about">
-        <div class="lastt" >
-          <h5>About</h5>
-          <h5 style="padding-top:2px ;"></h5>
-          
-          <h6>Contact us</h6>
-          <h6>About us</h6>
-          <h6>Careers</h6>
-          <h6>Press</h6>
-          <h6>E Kart stories</h6>
-        </div>
-        
-        <div class="lastt" >
-            <h5>Help</h5>
-          <h5 style="padding-top:2px ;"></h5>
-          
-          <h6>Payment</h6>
-          <h6>Return Center</h6>
-          <h6>FAQ</h6>
-          <h6>Help</h6>
-          
-          
-         
-        </div>
-        <div class="lastt" >
-            <h5>Policy</h5>
-          <h5 style="padding-top:2px ;"></h5>
-          
-          <h6>Return Policy</h6>
-          <h6>Term of use</h6>
-          <h6>Security</h6>
-          <h6>Sitemap</h6>
-         
-        </div>
+        <div class="about">
+            <div class="lastt">
+                <h5>About</h5>
+                <h5 style="padding-top:2px ;"></h5>
 
-        <div class="lastt" >
-            <h5>Social</h5>
-          <h5 style="padding-top:2px ;"></h5>
-        
-          <h6>Facebook</h6>
-          <h6>Twitter</h6>
-          <h6>Youtube</h6>
-          
-        </div>
+                <h6>Contact us</h6>
+                <h6>About us</h6>
+                <h6>Careers</h6>
+                <h6>Press</h6>
+                <h6>E Kart stories</h6>
+            </div>
 
-       </div>
-       <div style="display: flex;justify-content: center;align-items: center;width: 100%;background-color: #002E6E;height: 60px;">
-            <h1 style="font-weight: bold;background-color: #002E6E; color:khaki">E Kart</h1>
-       </div>
+            <div class="lastt">
+                <h5>Help</h5>
+                <h5 style="padding-top:2px ;"></h5>
+
+                <h6>Payment</h6>
+                <h6>Return Center</h6>
+                <h6>FAQ</h6>
+                <h6>Help</h6>
+
+
+
+            </div>
+            <div class="lastt">
+                <h5>Policy</h5>
+                <h5 style="padding-top:2px ;"></h5>
+
+                <h6>Return Policy</h6>
+                <h6>Term of use</h6>
+                <h6>Security</h6>
+                <h6>Sitemap</h6>
+
+            </div>
+
+            <div class="lastt">
+                <h5>Social</h5>
+                <h5 style="padding-top:2px ;"></h5>
+
+                <h6>Facebook</h6>
+                <h6>Twitter</h6>
+                <h6>Youtube</h6>
+
+            </div>
+
+        </div>
+        <div style="display: flex;justify-content: center;align-items: center;width: 100%;background-color: #002E6E;height: 60px;">
+            <h1 style="font-weight: bold;background-color: #002E6E; color:khaki"><a href="#EKART" style="text-decoration: none; color: khaki;"> E Kart</a></h1>
+        </div>
     </div>
-  
+    <script>
+          function hiei(pdff){
+
+            location.replace("https://eekaart.herokuapp.com/product");
+            
+            // document.getElementById(pdff).children[1].innerHTML="hii";
+            localStorage.setItem("pmk", document.getElementById(pdff).children[1].innerHTML);
+            localStorage.setItem("mkp", document.getElementById(pdff).children[2].innerHTML);
+            localStorage.setItem("kmp", document.getElementById(pdff).children[3].innerHTML);
+            localStorage.setItem("kkk", document.getElementById(pdff).children[0].children[0].src);
+            localStorage.setItem("1n", document.getElementById(pdff).children[0].children[1].src);
+            localStorage.setItem("2n", document.getElementById(pdff).children[0].children[2].src);
+            localStorage.setItem("3n", document.getElementById(pdff).children[0].children[3].src);
+
+
+          }
+        
+       
+       
+    </script>
+
     <script src="/js/style.js">
     </script>
 </body>
