@@ -15,6 +15,17 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+
+mongoose.connect('mongodb://localhost:27017/eKart_1', {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>{
+	console.log("DataBase is Connected!!");
+})
+.catch(err => {
+	console.log("Error Occured");
+	console.log(err);
+})
 
 var sql = require("./db")
 
