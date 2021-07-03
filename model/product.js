@@ -3,6 +3,9 @@ const product_schema = new mongoose.Schema({
   productId: {
    type: String
   },
+  category:{
+    type: String
+  },
   image: {
    type: String
   },
