@@ -9,16 +9,16 @@ const product_schema = new mongoose.Schema({
   image1: {
    type: String
   },
-    imag2: {
+    image2: {
    type: String
   },
-    imag3: {
+    image3: {
    type: String
   },
   description: {
    type: String
   },
-  star: {
+  rating: {
    type: Number
   },
   price: {

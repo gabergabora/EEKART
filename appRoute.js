@@ -17,6 +17,7 @@ module.exports = function(app) {
     app.all("/signin", rendering.signin);
     app.get("/addproduct/new", rendering.addproduct);
     app.post("/addproduct", Controller.addproduct);
+    app.all("/getproduct",Controller.getproduct);
     app.all("/product", rendering.product);
     app.all("/test", Controller.test);
     app.post("/addproduct", Controller.addproduct);
