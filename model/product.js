@@ -6,6 +6,9 @@ const product_schema = new mongoose.Schema({
   category:{
     type: String
   },
+  sub_category:{
+    type: String
+  },
   image: {
    type: String
   },
