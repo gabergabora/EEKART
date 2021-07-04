@@ -15,6 +15,17 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+
+mongoose.connect('mongodb+srv://admin-birju:Test123@cluster0.rz3bu.mongodb.net/eKart?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>{
+	console.log("DataBase is Connected!!");
+})
+.catch(err => {
+	console.log("Error Occured");
+	console.log(err);
+})
 
 var sql = require("./db")
 
