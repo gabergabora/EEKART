@@ -1,8 +1,8 @@
 ////parth no code
-function hei(pdff){
+function hei(pdff) {
 
-    location.replace("https://eekaart.herokuapp.com/product");
-    
+    location.replace("https://eeekart.herokuapp.com/product");
+
     // document.getElementById(pdff).children[1].innerHTML="hii";
     localStorage.setItem("pmk", document.getElementById(pdff).children[1].children[0].innerHTML);
     localStorage.setItem("mkp", document.getElementById(pdff).children[1].children[1].innerHTML);
@@ -13,12 +13,12 @@ function hei(pdff){
     localStorage.setItem("3n", document.getElementById(pdff).children[0].children[3].src);
 
 
-  }
+}
 
-  function heei(pdff){
+function heei(pdff) {
 
-    location.replace("https://eekaart.herokuapp.com/product");
-    
+    location.replace("https://eeekart.herokuapp.com/product");
+
     // document.getElementById(pdff).children[1].innerHTML="hii";
     localStorage.setItem("pmk", document.getElementById(pdff).children[0].children[1].children[0].innerHTML);
     localStorage.setItem("mkp", document.getElementById(pdff).children[0].children[1].children[1].innerHTML);
@@ -29,7 +29,7 @@ function hei(pdff){
     localStorage.setItem("3n", document.getElementById(pdff).children[0].children[3].src);
 
 
-  }
+}
 
 
 function change() {
@@ -50,16 +50,16 @@ const showCart = () => {
 
 // const productPage = () => {
 //     document.getElementById("TEST").children[1].innerHTML="hii";
-    
+
 //     location.replace("http://localhost:3000/product");
-     
+
 //     //  document.getElementById("xuxu").innerHTML;
 //     // document.getElementById("TEST").children[1].innerHTML;
-   
- 
-    
 
-     
+
+
+
+
 // }
 // document.getElementById("xuxu").innerHTML="helo";
 
@@ -199,9 +199,9 @@ $(document).ready(function() {
 });
 
 function signin() {
-    location.replace("https://eekaart.herokuapp.com/signin");
+    location.replace("https://eeekart.herokuapp.com/signin");
 }
 
 function retn() {
-    location.replace("https://eekaart.herokuapp.com/");
+    location.replace("https://eeekart.herokuapp.com/");
 }
