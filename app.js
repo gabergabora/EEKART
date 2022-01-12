@@ -18,14 +18,14 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 
-mongoose.connect('mongodb+srv://admin-doreamon:doreamon123@cluster0.rz3bu.mongodb.net/eKart?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
-.then(()=>{
-	console.log("MongoDB is Connected!!");
-})
-.catch(err => {
-	console.log("Error Occured");
-	console.log(err);
-})
+// mongoose.connect('mongodb+srv://admin-doreamon:doreamon123@cluster0.rz3bu.mongodb.net/eKart?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
+// .then(()=>{
+// 	console.log("MongoDB is Connected!!");
+// })
+// .catch(err => {
+// 	console.log("Error Occured");
+// 	console.log(err);
+// })
 
 var sql = require("./db")
 
