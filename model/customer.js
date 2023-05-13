@@ -9,7 +9,7 @@ const customer_schema = new mongoose.Schema({
  },
  email_id: {
   type: String,
-  require: true
+  require: true           
  },
  credit_card_details: {
   type: Number,
